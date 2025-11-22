@@ -1,0 +1,264 @@
+/* ====== FUNDO DA PÁGINA ====== */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../z-imagens/bifes-crus-meio-grelhados-e-meio-prontos-na-grelha.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ====== CARD ====== */
+.card {
+    width: 90%;
+    max-width: 380px;
+    padding: 25px;
+    border-radius: 14px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    color: white;
+    box-shadow: 0 0 14px rgba(0,0,0,0.6);
+}
+
+.card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF7406;
+}
+
+/* ====== CAMPOS DE FORMULÁRIO ====== */
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.field label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+/* REGRA CONSOLIDADA: Aplica o estilo tanto para input quanto para textarea */
+.field input,
+.field textarea { 
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* Campos em linha (Data e Horário) */
+.field-inline {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.field-inline .field {
+    flex: 1;
+}
+
+/* ====== BOTÕES DE AÇÃO ====== */
+button,
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #FF7406;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+button:hover,
+.btn:hover {
+    background: #e26704;
+}
+
+/* Ações Lado a Lado (Voltar e Finalizar) */
+.action-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-group .btn, 
+.action-group button {
+    flex: 1;
+    width: auto;
+}
+
+/* Botão Secundário (Voltar) */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2); 
+    border: 1px solid #FF7406; 
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* =================================================== */
+/* ====== ESTILO BASE DOS ITENS DE SELEÇÃO (GRID) ====== */
+/* =================================================== */
+
+/* Containers de Grid para Produtos, Cortes e Complementos */
+.produto-grid,
+.corte-grid, 
+.complementos-grid {
+    display: grid;
+    /* Colunas adaptáveis (min 130px de largura) */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Item Base (Produtos, Cortes, Complementos) - CORRIGIDO */
+.produto-item,
+.corte-item,
+.complemento-item,
+.item-select { /* Garante que todos os itens usem Flexbox */
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid transparent;
+    transition: .2s ease;
+    
+    /* CORREÇÃO DO LAYOUT: Usa Flexbox para centralizar conteúdo e respeitar o Grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+/* Imagem de TODOS os Itens - CORRIGIDO */
+.produto-item img,
+.corte-item img, 
+.complemento-item img {
+    max-width: 100%; 
+    width: 100%;
+    height: 125px; /* Altura unificada (maior) */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Texto dos Itens */
+.produto-item span,
+.corte-item span,
+.complemento-item span {
+    display: block;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+/* Seleção (Destaca o item selecionado) */
+.produto-item.selected,
+.corte-item.selected,
+.complemento-item.selected,
+.item-select.selected {
+    border: 2px solid #FF7406; 
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.03);
+}
+
+/* =================================================== */
+/* ====== Buffet (Rádio Botões) e Visibilidade ====== */
+/* =================================================== */
+
+/* Buffet - Rádio Botões Maiores */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 12px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.radio-group label:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.radio-group input[type="radio"]:checked + label {
+    border-color: #FF7406;
+    background: rgba(255,255,255,0.35);
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.3);
+}
+
+/* Classe de Visibilidade */
+.hidden {
+    display: none !important;
+}
+/* Adicione esta regra ao seu style.css, de preferência no final */
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.summary-table th, .summary-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary-table th {
+    color: #FF7406;
+    font-weight: bold;
+}
+
+.summary-section {
+    margin-bottom: 15px;
+}
+
+.summary-section p {
+    margin: 5px 0;
+}
+
+.total-price h3 {
+    margin-bottom: 0;
+}
+.logo-empresa {
+display: block; /* Garante que ocupe a própria linha */
+max-width: 180px; /* Define a largura máxima do logo */
+height: auto; /* Mantém a proporção da imagem */
+margin: 0 auto 20px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+/* Opcional: Adiciona um pequeno arredondamento ou sombra, dependendo do design do logo */
+border-radius: 100px; 
+}
+.total-price strong {
+    font-size: 1.8em;
+    color: #FF7406;
+}
+/* AJUSTE FINAL PARA ESPAÇAMENTO COMPACTO E LEGÍVEL */
+.summary-group p.detail-line {
+    /* Mude de 5px para 10px ou 12px para melhorar a legibilidade */
+    margin-bottom: 10px; 
+    padding: 0;
+}
