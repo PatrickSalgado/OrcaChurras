@@ -1,37 +1,325 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>OrçaChurras</title>
 
-    <link rel="icon" type="image/png" href="z-imagens/carne-crua.png">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>OrçaChurras</title>
+
+
+
+    <link rel="icon" type="image/png" href="z-imagens/carne-crua.png">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+
 
 <main class="page">
 
-    <section id="tela2" class="card">
 
-        <h1>Detalhes do Evento</h1>
 
-        <form id="formChurrasco" autocomplete="off">
-            <div class="actions">
-                <div class="action-group">
-                                        <a href="index.html" class="btn btn-secondary">Voltar</a>
-                    <button type="submit" id="btnFinalizar">Finalizar</button>
-                </div>
-            </div>
+    <section id="tela2" class="card">
 
-        </form>
 
-    </section>
+
+        <h1>Detalhes do Evento</h1>
+
+
+
+        <form id="formChurrasco" autocomplete="off">
+
+
+
+            <div class="field">
+
+                <label for="pessoas">Quantas pessoas?</label>
+
+                <input id="pessoas" name="pessoas" type="number" min="1" placeholder="Ex: 20" required>
+
+            </div>
+
+
+
+            <p id="resultadoCarne" class="auto-text">
+
+                Cada pessoa = 300g de proteina<br>
+
+                Total aproximado: <strong id="valorCarne">0 Kg</strong>
+
+            </p>
+
+            
+
+            <h3>O que vai ser servido ?</h3>
+
+            <div class="produto-grid">
+
+                
+
+                <div class="item-select produto-item" data-value="carne">
+
+                    <img src="z-imagens/Carne.jpg" alt="Carne">
+
+                    <span>🥩 Carne</span>
+
+                    <input type="checkbox" name="produtos" value="carne" hidden>
+
+                </div>
+
+
+
+                <div class="item-select produto-item" data-value="linguica">
+
+                    <img src="z-imagens/Linguiça.jpg" alt="Linguiça">
+
+                    <span>🍖 Linguiça</span>
+
+                    <input type="checkbox" name="produtos" value="linguica" hidden>
+
+                </div>
+
+
+
+                <div class="item-select produto-item" data-value="frango">
+
+                    <img src="z-imagens/Frango.jpg" alt="Frango">
+
+                    <span>🍗 Frango</span>
+
+                    <input type="checkbox" name="produtos" value="frango" hidden>
+
+                </div>
+
+
+
+                <div class="item-select produto-item" data-value="queijo">
+
+                    <img src="z-imagens/Queijo coalho.webp" alt="Queijo Coalho">
+
+                    <span>🧀 Queijo Coalho</span>
+
+                    <input type="checkbox" name="produtos" value="queijo" hidden>
+
+                </div>
+
+
+
+                <div class="item-select produto-item" data-value="pao">
+
+                    <img src="z-imagens/Pão de alho.jpg" alt="Pão de Alho">
+
+                    <span>🍞 Pão de Alho</span>
+
+                    <input type="checkbox" name="produtos" value="pao" hidden>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <hr>
+
+
+
+            <h3>Tipo de corte</h3>
+
+
+
+            <div class="corte-grid">
+
+                
+
+                <div class="item-select corte-item" data-value="inteira">
+
+                    <img src="z-imagens/Carne Pedaço.jpg" alt="Inteira">
+
+                    <span>Inteira</span>
+
+                    <input type="radio" name="corte" value="inteira" hidden checked> </div>
+
+
+
+                <div class="item-select corte-item" data-value="fatiada">
+
+                    <img src="z-imagens/Carne Fatiada.jpg" alt="Fatiada">
+
+                    <span>Fatiada</span>
+
+                    <input type="radio" name="corte" value="fatiada" hidden>
+
+                </div>
+
+
+
+                <div class="item-select corte-item" data-value="espetinho">
+
+                    <img src="z-imagens/Espetinho.webp" alt="Espetinho">
+
+                    <span>Espetinho</span>
+
+                    <input type="radio" name="corte" value="espetinho" hidden>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <hr>
+
+
+
+            <h3>Deseja buffet?</h3>
+
+
+
+            <div class="radio-group">
+
+                <label><input id="buffetSim" type="radio" name="buffet" value="sim"> Sim</label>
+
+                <label><input id="buffetNao" type="radio" name="buffet" value="nao" checked> Não</label>
+
+            </div>
+
+
+
+
+
+            <div id="complementosBox" class="hidden">
+
+                <h3>Complementos</h3>
+
+
+
+                <div class="complementos-grid">
+
+                    
+
+                    <div class="item-select complemento-item" data-value="arroz">
+
+                        <img src="z-imagens/Arroz.jpg" alt="Arroz">
+
+                        <span>🍚 Arroz</span>
+
+                        <input type="checkbox" name="complementos" value="arroz" hidden>
+
+                    </div>
+
+                    
+
+                    <div class="item-select complemento-item" data-value="vinagrete">
+
+                        <img src="z-imagens/Vinagrete.jpg" alt="Vinagrete">
+
+                        <span>🥙 Vinagrete</span>
+
+                        <input type="checkbox" name="complementos" value="vinagrete" hidden>
+
+                    </div>
+
+                    
+
+                    <div class="item-select complemento-item" data-value="farofa">
+
+                        <img src="z-imagens/Farofa.webp" alt="Farofa">
+
+                        <span>🥘 Farofa</span>
+
+                        <input type="checkbox" name="complementos" value="farofa" hidden>
+
+                    </div>
+
+                    
+
+                    <div class="item-select complemento-item" data-value="maionese">
+
+                        <img src="z-imagens/Maionese.avif" alt="Salada Maionese">
+
+                        <span>🥗 Salada Maionese</span>
+
+                        <input type="checkbox" name="complementos" value="maionese" hidden>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+            
+
+            <hr>
+
+
+
+            <div class="field">
+
+                <label for="observacoes">Observações (Opcional)</label>
+
+                <textarea 
+
+                    id="observacoes" 
+
+                    name="observacoes" 
+
+                    rows="4" 
+
+                    placeholder="Ex: Não incluir pimenta, entregar até 11:30, etc."
+
+                ></textarea>
+
+            </div>
+
+
+
+            <div class="actions">
+
+                <div class="action-group">
+
+                    <a href="index.html" class="btn btn-secondary">Voltar</a>
+
+                    <button type="submit" id="btnFinalizar">Finalizar</button>
+
+                </div>
+
+            </div>
+
+
+
+        </form>
+
+
+
+    </section>
+
+
 
 </main>
 
-<script src="precos.js"></script> 
+
+
+<script src="precos.js"></script> 
+
 <script src="script_tela2.js"></script>
 
+
+
 </body>
+
 </html>

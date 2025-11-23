@@ -1,38 +1,194 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Orçamento Final - OrçaChurras</title>
 
-    <link rel="icon" type="image/png" href="z-imagens/carne-crua.png">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Orçamento Final - OrçaChurras</title>
+
+
+
+    <link rel="icon" type="image/png" href="z-imagens/carne-crua.png">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
+
 
 <main class="page">
 
-    <section id="resumoFinal" class="card">
 
-        <h1>🎉 Orçamento Finalizado</h1>
 
-        </div>
+    <section id="resumoFinal" class="card">
+
+
+
+        <h1>🎉 Orçamento Finalizado</h1>
+
+
+
+        <div class="summary-group">
+
+            <h3>Dados do Cliente</h3>
+
+            <p><strong>Nome:</strong> <span id="resumoNomeCliente">Carregando...</span></p>
+
+            <p><strong>Telefone:</strong> <span id="resumoTelefoneCliente">Carregando...</span></p>
+
+        </div>
+
+
+
+        <hr>
+
+
+
+
+
+        <div class="summary-group">
+
+            <h3>Local do Evento</h3>
+
+            <p><strong>Endereço:</strong> <span id="resumoEnderecoEvento">Carregando...</span></p>
+
+            <p><strong>Data:</strong> <span id="resumoDataEvento">Carregando...</span></p>
+
+            <p><strong>Horário:</strong> <span id="resumoHorarioEvento">Carregando...</span></p>
+
+        </div>
+
+
+
+        <hr>
+
+
+
+        <div class="summary-group">
+
+            <h3>Detalhes do Evento</h3>
+
+            <p><strong>Pessoas:</strong> <span id="resumoPessoas">0</span></p>
+
+            <p><strong>Total de Proteína:</strong> <span id="resumoTotalKg">0 Kg</span></p>
+
+            <p><strong>Tipo de Corte:</strong> <span id="resumoCorte">NÃO SELECIONADO</span></p>
+
+        </div>
+
+
+
+        <hr>
+
+
+
+        <div class="summary-group">
+
+            <h3>Mercadoria Necessária</h3>
+
+            <table id="tabelaResumo" class="summary-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Item</th>
+
+                        <th>Qtde / Unidade</th> <th>Custo Estimado</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <hr>
+
+
+
+        <div class="summary-group">
+
+            <h3>Custo de Mão de Obra</h3>
+
+    
+
+    <p><strong>Horas de Serviço:</strong> <span id="resumoHorasEvento">0h</span></p>
+
+    
+
+    <p>
+
+        <strong>Custo Churrasqueiro:</strong> 
+
+        <span id="resumoCustoChurrasqueiroDetalhado">R$ 0,00</span> 
+
+    </p>
+
+    
+
+    <p><strong>Custo Ajudante (Buffet):</strong> <span id="resumoCustoAjudante">R$ 0,00</span></p>
+
+
+
+        <div class="summary-group">
+
+            <h3>Observações</h3>
+
+            <p><span id="resumoObservacoes">Nenhuma.</span></p>
+
+            <p class="total-line">
+
+                <strong>VALOR TOTAL DO ORÇAMENTO:</strong> 
+
+                <span id="resumoValorTotal" class="total-value">R$ 0,00</span>
+
+            </p>
+
+        </div>
+
+
 
 <div class="actions">
-    <div class="action-group">
-                <button type="button" id="btnVoltarResumo" class="btn btn-secondary">Voltar</button>
 
-        <button type="button" id="btnEnviarWhatsapp" class="btn btn-primary">
-            Encaminhar WhatsApp
-        </button>
-    </div>
+    <div class="action-group">
+
+        <button type="button" id="btnVoltarResumo" class="btn btn-secondary">Voltar</button>
+
+
+
+        <button type="button" id="btnEnviarWhatsapp" class="btn btn-primary">
+
+            Encaminhar WhatsApp
+
+        </button>
+
+    </div>
+
 </div>
+
+
 
 </section>
 
+
+
 </main>
 
-<script src="script_tela3.js"></script> 
 
+<script src="script_tela3.js"></script> 
 </body>
 </html>

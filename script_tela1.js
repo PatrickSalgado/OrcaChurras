@@ -59,7 +59,7 @@ function salvarDadosCliente(event) {
     console.log("Dados do cliente salvos no Local Storage:", dadosParaSalvar);
 
     // Redireciona para a próxima página
-    window.location.href = "../Index/detalhesChurrasco.html";
+    window.location.href = "detalhesChurrasco.html";
 }
 
 
