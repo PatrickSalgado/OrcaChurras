@@ -23,7 +23,7 @@ const PRECOS_MEDIOS = {
 
 const TAXAS_CHURRASQUEIRO = {
     // Valor fixo por hora, alterável
-    VALOR_HORA_BASE: 60.00, 
+    VALOR_HORA_BASE: 41,66666666666667, 
     // Tempo padrão de evento (em horas)
     HORAS_PADRAO_EVENTO: 6, 
     // Taxa adicional fixa se o buffet for selecionado
