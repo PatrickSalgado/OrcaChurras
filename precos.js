@@ -4,17 +4,17 @@
 
 const PRECOS_MEDIOS = {
     // --- Proteínas e Acompanhamentos Principais (R$ por KG) ---
-    carne: 39.90,         
-    linguica: 26.90,      
-    frango: 21.00,
+    carne: 49.90,         
+    linguica: 25.90,      
+    frango: 29.90,
     pao: 9.90, 
-    queijo: 19.90, 
+    queijo: 29.90, 
     
     // --- Complementos de Buffet (R$ por KG) ---
     arroz: 5.50, 
-    vinagrete: 9.50,
-    farofa: 20.00,
-    maionese: 13.00
+    vinagrete: 15.00,
+    farofa: 15.00,
+    maionese: 15.00
 };
 
 // ===================================================
